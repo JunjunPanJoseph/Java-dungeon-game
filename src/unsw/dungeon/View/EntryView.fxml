@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<Pane onKeyPressed="#handleKeyPress" prefHeight="500.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <ImageView fitHeight="500.0" fitWidth="700.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../../images/view/mainview.png" />
+      </image>
+    </ImageView>
+    <Button id="Start" fx:id="startGame" contentDisplay="CENTER" graphicTextGap="4.0" layoutX="270.0" layoutY="310.0" maxHeight="32.0" maxWidth="160.0" mnemonicParsing="false" onAction="#handleStartGame" prefHeight="32.0" prefWidth="160.0" text="Start Game" />
+    <Button fx:id="setting" layoutX="270.0" layoutY="355.0" mnemonicParsing="false" onAction="#handleSetting" prefHeight="32.0" prefWidth="160.0" text="Setting" />
+    <Button fx:id="exit" layoutX="270.0" layoutY="400.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="32.0" prefWidth="160.0" text="Exit" />
+  </children>
+</Pane>

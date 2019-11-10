@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<Pane onKeyPressed="#handleKeyPress" prefHeight="500.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <ImageView fitHeight="500.0" fitWidth="700.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../../images/view/mainview.png" />
+      </image>
+    </ImageView>
+    <ScrollPane fx:id="setting" hbarPolicy="NEVER" layoutX="14.0" layoutY="51.0" pannable="true" prefHeight="373.0" prefWidth="672.0000999999975" vbarPolicy="ALWAYS">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+      </content>
+    </ScrollPane>
+    <Button id="Start" fx:id="back" layoutX="14.0" layoutY="454.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="32.0" prefWidth="160.0" text="Back" />
+    <Button id="Start" fx:id="start" layoutX="526.0" layoutY="454.0" mnemonicParsing="false" onAction="#handleStart" prefHeight="32.0" prefWidth="160.0" text="Open" />
+    <Text fill="#dfdfdf" layoutX="348.0" layoutY="33.0" scaleX="2.0" scaleY="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Game Map" x="-50.0">
+      <font>
+        <Font name="System Bold" size="12.0" />
+      </font>
+    </Text>
+    <Text fx:id="message" fill="RED" layoutX="408.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+  </children>
+</Pane>

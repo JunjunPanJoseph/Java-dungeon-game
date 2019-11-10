@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="gamePane" disable="false" focusTraversable="false" mouseTransparent="false" onKeyPressed="#handleKeyPress" prefHeight="500.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <ImageView fitHeight="500.0" fitWidth="700.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../../images/view/ground.png" />
+      </image>
+    </ImageView>
+    <ScrollPane fx:id="scrollPane" focusTraversable="false" layoutY="100.0" mouseTransparent="true" prefHeight="400.0" prefWidth="700.0">
+      <content>
+        <StackPane prefHeight="150.0" prefWidth="200.0">
+          <children>
+            <Rectangle fx:id="blackBackground" arcHeight="5.0" arcWidth="5.0" fill="BLACK" height="400.0" stroke="BLACK" strokeType="INSIDE" width="700.0" x="0.0" y="0.0" />
+            <GridPane fx:id="squares" gridLinesVisible="false" onKeyPressed="#handleKeyPress" />
+            <BorderPane fx:id="animationLayer" disable="true" prefHeight="120.0" prefWidth="110.0" />
+          </children>
+        </StackPane>
+      </content>
+    </ScrollPane>
+    <ImageView fx:id="playerImage" fitHeight="80.0" fitWidth="80.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true" x="10.0" y="10.0" />
+    <ProgressBar fx:id="playerHpBar" layoutX="110.0" layoutY="45.0" prefWidth="80.0" progress="0.0" />
+    <Text id="playerHp" layoutX="110.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hp:">
+      <fill>
+        <Color blue="0.750" green="0.750" red="0.750" fx:id="x2" />
+      </fill>
+      <font>
+        <Font name="System Bold" size="12.0" fx:id="x1" />
+      </font>
+    </Text>
+    <Text id="playerName" fill="$x2" font="$x1" layoutX="110.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player" />
+    <Text id="playerHp" fx:id="playerHpValue" fill="$x2" font="$x1" layoutX="135.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-1/-1" />
+    <GridPane fx:id="playerPack" gridLinesVisible="false" layoutX="210.0" layoutY="10.0" maxHeight="80.0" maxWidth="-1.0" prefHeight="80.0" prefWidth="400.0" />
+    <GridPane id="playerPack" fx:id="playerPackCurrentItem" gridLinesVisible="false" layoutX="210.0" layoutY="10.0" maxHeight="80.0" maxWidth="-1.0" prefHeight="80.0" prefWidth="960.0">
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <Pane id="msjg" fx:id="msgPlane" disable="true" layoutX="0.0" layoutY="150.0" onKeyPressed="#handleKeyPress" prefHeight="300.0" prefWidth="700.0" visible="false">
+      <children>
+        <Rectangle fx:id="backGround" arcHeight="5.0" arcWidth="5.0" fill="#000000b2" height="300.0" layoutX="0.0" layoutY="0.0" onKeyPressed="#handleKeyPress" stroke="TRANSPARENT" strokeType="INSIDE" width="700.0" />
+        <Text fx:id="message" fill="#dfdfdf" layoutX="280.0" layoutY="40.0" scaleX="1.0" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pause" textAlignment="CENTER" textOrigin="CENTER">
+          <font>
+            <Font size="30.0" />
+          </font>
+        </Text>
+        <Pane fx:id="goals" layoutX="100.0" layoutY="60.0" prefHeight="200.0" prefWidth="500.0" />
+        <Text fx:id="backMessage" fill="#cc0000" layoutX="50.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+          <font>
+            <Font size="14.0" />
+          </font>
+        </Text>
+        <Button fx:id="bottonBack" layoutX="50.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleBottonBack" prefHeight="32.0" prefWidth="160.0" text="Back" />
+        <Button fx:id="bottonContinue" layoutX="490.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleBottonContinue" prefHeight="32.0" prefWidth="160.0" text="Continue" />
+      </children>
+    </Pane>
+  </children>
+</Pane>
